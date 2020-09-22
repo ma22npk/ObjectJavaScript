@@ -33,8 +33,21 @@ const scores = [80, 90, 40, 70];
 
 //ループ処理でiが0から3未満(scoresの数だけ)の間1ずつ増やしながら次の処理をする.
 //結果 = 上と同じ
+// for (let i = 0; i < scores.length; i++) {
+//   console.log(`Score: ${scores[i]}`);
+// }
+
+// 配列の要素を変更 ===========================
+//unshift() 配列の先頭を追加
+//shift() 配列の先頭を削除
+//push() 配列の末尾を追加 (*一番使うのはpush)
+//pop() 配列の末尾を削除
+
+// 結果 = 末尾に 60, 50が追加される
+scores.push(60, 50);
 for (let i = 0; i < scores.length; i++) {
   console.log(`Score: ${scores[i]}`);
 }
+
 
 }

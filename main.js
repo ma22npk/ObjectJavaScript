@@ -3,10 +3,25 @@
 'use strict'
 
 {
+// 配列の基本生成 ===========================
 const score1 = 80;
 const score2 = 90;
 const score3 = 40;
 
 const scores = [80, 90, 40];
-console.log(scores);
+
+// 配列の要素にアクセス ===========================
+// []のなかに何番目の要素か入力
+//console.log(scores[1]);
+
+// 要素の配列を書き換える
+//結果 = 44
+// scores[2] = 44;
+// console.log(scores);
+
+//配列の中の要素数を取得
+//結果3
+// console.log(scores.length);
+
+
 }

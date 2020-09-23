@@ -68,7 +68,7 @@
 
 //分割代入を使用する
 //配列の中身を個々の定数にしたい場合
-const scores = [80, 90, 40, 70];
+
 // const [a,b,c,d] = scores;
 // console.log(a);//結果80
 // console.log(b);//結果90
@@ -80,11 +80,26 @@ const scores = [80, 90, 40, 70];
 // console.log(b);//結果90
 // console.log(others);//結果[40, 70]
 
-let x = 30;
-let y = 70;
-[x, y] = [y, x];
-//値の交換をすることができる
-console.log(x);//結果70
-console.log(y);//結果30
+// let x = 30;
+// let y = 70;
+// [x, y] = [y, x];
+// //値の交換をすることができる
+// console.log(x);//結果70
+// console.log(y);//結果30
+
+const scores = [80, 90, 40, 70];
+
+//forEachはfor文をもっとスッキリかける。
+//()の中に引数を設定しておくと配列の要素をその名前でひとつずつ受け取り、そのブロックの中で使うことができる。
+// scores.forEach((score) => {
+// console.log(`Score: ${score}`);
+// });
+// //結果Score:80,Score:90,Score:40,Score:70
+
+//要素のインデックスを表示する(indexという引数名でなくても大丈夫)
+scores.forEach((score, index) => {
+console.log(`Score${index}: ${score}`);
+});
+//結果Score0:80,Score1:90,Score2:40,Score3:70
 
 }

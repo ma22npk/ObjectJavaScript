@@ -49,21 +49,42 @@
 //pop() 配列の末尾を削除
 
 //スプレッド構文を学ぶ
-const otherScores = [10, 20];
+// const otherScores = [10, 20];
 //... と記述することで配列の中に別の配列を展開する
-const scores = [80, 90, 40, 70, ...otherScores];
+// const scores = [80, 90, 40, 70, ...otherScores];
 
-function sum(a, b) {
-console.log(a + b);
-}
+// function sum(a, b) {
+// console.log(a + b);
+//}
 
 //結果 = 30
-sum(...otherScores)
+// sum(...otherScores);
 
 // 結果 = 末尾に 60, 50が追加される
 // scores.push(60, 50);
 // for (let i = 0; i < scores.length; i++) {
 //   console.log(`Score: ${scores[i]}`);
 // }
+
+//分割代入を使用する
+//配列の中身を個々の定数にしたい場合
+const scores = [80, 90, 40, 70];
+// const [a,b,c,d] = scores;
+// console.log(a);//結果80
+// console.log(b);//結果90
+// console.log(c);//結果40
+// console.log(d);//結果70
+
+// const [a,b, ...others] = scores;
+// console.log(a);//結果80
+// console.log(b);//結果90
+// console.log(others);//結果[40, 70]
+
+let x = 30;
+let y = 70;
+[x, y] = [y, x];
+//値の交換をすることができる
+console.log(x);//結果70
+console.log(y);//結果30
 
 }

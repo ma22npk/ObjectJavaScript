@@ -4,47 +4,27 @@
 
 
 {
-  //オブジェクトを作ってみる
-  //今までの配列は複数の値に順番をつけてまとめたもの。
-  //値に名前をつけて管理することができるオブジェクトについて学ぶ
-  //const point = [100, 180];
 
+//Object.keys()を使う
+const point = {
+x:100,
+y:180,
+};
 
-  //結果 = {x: 100, y: 180}
-  //y:180,
-  //全体をプロパティ（メンバー）,
-  //x: 部分を名前（キー）
-  //180の部分を値と呼ぶ
+//オブジェクトにはforEachが使えないので,Object.keys(point) と表現する
+const keys = Object.keys(point);
+keys.forEach(key => {
+//キーを取得する。 中の値を取得する場合は[]で取得。
+console.log(`Key: ${key} Value: ${point[key]}`);
+});
 
-  //オブジェクトを操作する
-  const otherProps = {
-    r: 4,
-    color: 'red',
-  };
+const points = [
+{x: 30, y: 20},
+{x: 10, y: 50},//ここの値を取得したい
+{x: 40, y: 40},
+];
 
-  const point = {
-    x: 100,
-    y: 180,
-    //スプレッド構文で新しいオブジェクトを追加する
-    ...otherProps,
-  };
-  //console.log(point);
-  //結果  {x: 100, y: 180, r: 4, color: "red"}
-
-  //xとyを定数として扱う
-  const {
-    x,
-    r,
-    ...others
-  } = point;
-  console.log(x);
-  console.log(r);
-  console.log(others);
-  //結果
-  // {y: 180, color: "red"}
-  // color: "red"
-  // y: 180
-  // __proto__: Object
-
+//結果 50
+console.log(points[1].y);
 
 }

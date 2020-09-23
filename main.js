@@ -97,9 +97,20 @@ const scores = [80, 90, 40, 70];
 // //結果Score:80,Score:90,Score:40,Score:70
 
 //要素のインデックスを表示する(indexという引数名でなくても大丈夫)
-scores.forEach((score, index) => {
-console.log(`Score${index}: ${score}`);
-});
-//結果Score0:80,Score1:90,Score2:40,Score3:70
+// scores.forEach((score, index) => {
+// console.log(`Score${index}: ${score}`);
+// });
+// //結果Score0:80,Score1:90,Score2:40,Score3:70
+
+//mapを学ぶ
+//配列に何かしらの処理をしてその結果を別の配列として取得する。
+//定価と税込価格を表示するのに使えそう！
+const prices = [180, 190, 200];
+// const updatePrices = prices.map((price) =>{
+// return price + 20;
+// });
+//これを短く描く
+const updatePrices = prices.map(price=> price + 20);
+console.log(updatePrices);
 
 }

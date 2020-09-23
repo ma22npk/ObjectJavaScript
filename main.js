@@ -125,7 +125,7 @@
   // });
   // console.log(evenNumbers);
 //returnするものがそれしかない場合、条件式自体をリターンすれば良い。
-  const evenNumbers = numbers.filter(number => number % 2 === 0);
-  console.log(evenNumbers);
+  // const evenNumbers = numbers.filter(number => number % 2 === 0);
+  // console.log(evenNumbers);
 
 }

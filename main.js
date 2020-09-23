@@ -4,15 +4,15 @@
 
 {
 // 配列の基本生成 ===========================
-const score1 = 80;
-const score2 = 90;
-const score3 = 40;
+// const score1 = 80;
+// const score2 = 90;
+// const score3 = 40;
 
-const scores = [80, 90, 40, 70];
+// const scores = [80, 90, 40, 70];
 // spliceで配列を変更 ===========================
 // a.splice()
 // splice(変化が開始する位置, 削除数, 追加する要素, 追加する要素,・・・・ )
-scores.splice(1, 2, 40, 50);
+// scores.splice(1, 2, 40, 50);
 // 結果 = 配列の中の90,40が削除され、40と50が追加される。
 
 // 配列の要素にアクセス ===========================
@@ -48,10 +48,22 @@ scores.splice(1, 2, 40, 50);
 //push() 配列の末尾を追加 (*一番使うのはpush)
 //pop() 配列の末尾を削除
 
-// 結果 = 末尾に 60, 50が追加される
-scores.push(60, 50);
-for (let i = 0; i < scores.length; i++) {
-  console.log(`Score: ${scores[i]}`);
+//スプレッド構文を学ぶ
+const otherScores = [10, 20];
+//... と記述することで配列の中に別の配列を展開する
+const scores = [80, 90, 40, 70, ...otherScores];
+
+function sum(a, b) {
+console.log(a + b);
 }
+
+//結果 = 30
+sum(...otherScores)
+
+// 結果 = 末尾に 60, 50が追加される
+// scores.push(60, 50);
+// for (let i = 0; i < scores.length; i++) {
+//   console.log(`Score: ${scores[i]}`);
+// }
 
 }
